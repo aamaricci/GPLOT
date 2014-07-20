@@ -1,0 +1,23 @@
+*************** PLOT *******************
+**   gnuplot from command-line        **
+**  A.Amaricci (from K.Haule)         **
+****************************************
+
+[... |] plot [-xy] [-uw file] [-uw file] [-uw] [-p file] [-g] [-itab] [-otab]
+Options:   -x     x-interval    -x0:10
+           -y     y-interval    -y-2.5:0.75
+           -u     x, y column   -u1:3; -uall
+           -w     style         -wp; -wd; -wl; -wlinesp; -ws
+           -cfile use configuration file
+
+           new features:
+           automatically assigning linestyle
+           title is filename or dirname (-d)
+           -p<filename>    print to filename 
+           -it<ab> with ab=tl,tc,tr|cl,c,cr|bl,bc,br place title in a given inside position
+           -ot<ab> with ab=tl,tc,tr|cl,c,cr|bl,bc,br place title in a given outside position
+
+Examples:  plot data
+           plot -u1:3 -wp -x-1:1 data.1* -u1:2 -wl data.0
+           prog | plot -uall
+           prog | plot -wl test.dat -wp
